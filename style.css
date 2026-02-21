@@ -1,0 +1,162 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: #f4f4f4;
+}
+
+/* Navy and white vertical stripes background */
+body::before {
+    content: "";
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(
+        to right,
+        #1f2544 0px,
+        #1f2544 40px,
+        white 40px,
+        white 120px
+    );
+    opacity: 0.1;
+    z-index: -1;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+}
+
+.panels {
+    display: flex;
+}
+
+.left-panel {
+    width: 40%;
+}
+
+.right-panel {
+    width: 60%;
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0px 10px 30px rgba(0,0,0,0.1);
+}
+
+.title {
+    font-size: 48px;
+    letter-spacing: 5px;
+}
+
+#phase {
+    font-size: 24px;
+    color: #1f2544;
+    margin-bottom: 20px;
+}
+
+.timer-box {
+    margin-top: 40px;
+}
+
+#time {
+    font-size: 60px;
+    color: #e63946;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 10px;
+    border: 4px solid #F79E1B;
+    background-color: #1f2544;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #394867;
+}
+
+.task-section {
+    margin-top: 30px;
+}
+
+#taskInput {
+    padding: 10px;
+    width: 70%;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+#forest {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+/* Tomato container */
+.tomato-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+}
+
+/* Tomato design */
+.tomato {
+    width: 40px;
+    height: 40px;
+    background-image: url('tomato.jpg');
+    background-size: cover;
+    border-radius: 50%;
+    position: relative;
+    border: 4px solid #F79E1B;
+}
+
+/* Task name below tomato */
+.task-name {
+    font-size: 10px;
+    color: #333;
+    margin-top: 5px;
+    text-align: center;
+    max-width: 60px;
+    word-wrap: break-word;
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+    .panels {
+        flex-direction: column;
+    }
+    .left-panel, .right-panel {
+        width: 100%;
+    }
+    .title {
+        font-size: 36px;
+    }
+    #phase {
+        font-size: 18px;
+    }
+    #time {
+        font-size: 48px;
+    }
+    button {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+    .task-section input {
+        width: 60%;
+    }
+    .right-panel {
+        margin-top: 30px;
+    }
+}

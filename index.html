@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro Forest</title>
+    <link rel="icon" type="image/jpeg" href="tomato.jpg">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="panels">
+            <div class="left-panel">
+                <h1 class="title">POMODORO</h1>
+
+                <div id="phase">Work Session</div>
+
+                <div class="timer-box">
+                    <h2 id="time">25:00</h2>
+                    <div class="buttons">
+                        <button onclick="startTimer()">Start</button>
+                        <button onclick="startShortBreak()">Short Break (5 min)</button>
+                        <button onclick="startLongBreak()">Long Break (10 min)</button>
+                        <button onclick="resetTimer()">Reset</button>
+                    </div>
+                </div>
+
+                <div class="task-section">
+                    <input type="text" id="taskInput" placeholder="Enter task name...">
+                    <button onclick="completeTask()">Complete Task 🍅</button>
+                </div>
+            </div>
+
+            <div class="right-panel">
+                <h2>Your Tomato Forest</h2>
+                <div id="forest"></div>
+            </div>
+        </div>
+
+        <footer>
+            <p>By Harshana</p>
+            <p>GitHub @har5hana</p>
+        </footer>
+
+    </div>
+
+<script src="script.js"></script>
+</body>
+</html>
